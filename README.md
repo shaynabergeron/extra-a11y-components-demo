@@ -15,6 +15,11 @@ This update includes the requested UI changes:
 - the multi-select dropdown shows selected items as inline tags inside the trigger
 - the multi-select still supports Tab, Space, and Enter for checkbox access
 
+## TODO
+
+- multiselect is broken 😔
+- make multiselect more accessible, especially for screen readers
+
 ## Included files
 
 - `autocomplete.html`
