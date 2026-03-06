@@ -80,6 +80,8 @@ function announce(message) {
 function openListbox() {
   listbox.hidden = false;
   input.setAttribute("aria-expanded", "true");
+  button.setAttribute("aria-expanded", "true");
+  button.setAttribute("aria-label", "Hide state suggestions");
   button.classList.add("open");
 }
 
@@ -90,6 +92,9 @@ function openListbox() {
 function closeListbox() {
   listbox.hidden = true;
   input.setAttribute("aria-expanded", "false");
+  button.setAttribute("aria-expanded", "false");
+  button.setAttribute("aria-label", "Show state suggestions");
+  input.setAttribute("aria-activedescendant", "");
   button.classList.remove("open");
 }
 

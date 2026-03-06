@@ -27,37 +27,39 @@
       <div class="demo-card-body">
 
 <div class="component-wrapper">
-    <div id="stateDropdownHelp" class="form-text mt-2">
-    Type to filter, or open the browse button to review all options. Use Up and Down Arrow keys, Enter to select, and Escape to close.
-  </div>
-  <div class="component-label-row mb-2">
+    <div class="component-label-row mb-2">
     <label for="stateDropdownInput" class="form-label mb-0 fw-semibold fs-5">Choose a state</label>
     <span class="pelican-badge">Single select</span>
   </div>
+    <div id="stateDropdownHelp" class="form-text mt-2">
+    Type to filter, or open the browse button to review all options. Use Up and Down Arrow keys, Enter to select, and Escape to close.
+  </div>
+
 
   <div class="input-group input-with-button">
     <input
-      id="stateDropdownInput"
-      type="text"
-      class="form-control form-control-lg"
-      role="combobox"
-      aria-autocomplete="list"
-      aria-expanded="false"
-      aria-controls="stateDropdownListbox"
-      aria-activedescendant=""
-      aria-describedby="stateDropdownHelp"
-      autocomplete="off"
+  id="stateDropdownInput"
+  type="text"
+  class="form-control form-control-lg"
+  role="combobox"
+  aria-autocomplete="list"
+  aria-expanded="false"
+  aria-controls="stateDropdownListbox"
+  aria-activedescendant=""
+  aria-describedby="stateDropdownHelp"
+  aria-haspopup="listbox"
+  autocomplete="off"
     >
   <button
   id="stateDropdownToggle"
   type="button"
   class="btn btn-primary dropdown-toggle-btn"
-  aria-label="Toggle suggestions"
+  aria-label="Show state suggestions"
   aria-expanded="false"
->
-  <i class="bi bi-chevron-down dropdown-icon"></i>
-</button>
-  </div>
+  aria-controls="stateDropdownListbox"
+  >
+    <i class="bi bi-chevron-down dropdown-icon" aria-hidden="true"></i>
+  </button>
 
   <ul id="stateDropdownListbox" class="list-group autocomplete-listbox mt-0" role="listbox" hidden></ul>
   <div id="stateDropdownStatus" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
