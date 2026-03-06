@@ -10,10 +10,10 @@ This package includes four examples:
 ## What changed in this version
 
 This update includes the requested UI changes:
-- the dropdown panels now sit flush against the trigger or input
+
+- the dropdown panels now sit flush against the trigger
 - the multi-select dropdown shows selected items as inline tags inside the trigger
 - the multi-select still supports Tab, Space, and Enter for checkbox access
-- styling remains Pelican-inspired and Bootstrap-based
 
 ## Included files
 
@@ -35,16 +35,12 @@ Open any HTML file directly after unzipping, or run a local server.
 Using Node:
 npx serve
 
-Using Python:
-python3 -m http.server
-
 Then open:
+
 - http://localhost:3000/autocomplete.html
 - http://localhost:3000/autocomplete-dropdown.html
 - http://localhost:3000/multiselect.html
 - http://localhost:3000/multiselect-dropdown.html
-
-If using Python's default server, use port 8000 instead.
 
 ## Accessibility notes
 
