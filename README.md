@@ -1,0 +1,53 @@
+# Pelican-Inspired Accessible Bootstrap Form Component Demos
+
+This package includes four examples:
+
+- `autocomplete.html`
+- `autocomplete-dropdown.html`
+- `multiselect.html`
+- `multiselect-dropdown.html`
+
+## What changed in this version
+
+This update includes the requested UI changes:
+- the dropdown panels now sit flush against the trigger or input
+- the multi-select dropdown shows selected items as inline tags inside the trigger
+- the multi-select still supports Tab, Space, and Enter for checkbox access
+- styling remains Pelican-inspired and Bootstrap-based
+
+## Included files
+
+- `autocomplete.html`
+- `autocomplete.js`
+- `autocomplete-dropdown.html`
+- `autocomplete-dropdown.js`
+- `multiselect.html`
+- `multiselect.js`
+- `multiselect-dropdown.html`
+- `multiselect-dropdown.js`
+- `styles.css`
+- `README.md`
+
+## Run locally
+
+Open any HTML file directly after unzipping, or run a local server.
+
+Using Node:
+npx serve
+
+Using Python:
+python3 -m http.server
+
+Then open:
+- http://localhost:3000/autocomplete.html
+- http://localhost:3000/autocomplete-dropdown.html
+- http://localhost:3000/multiselect.html
+- http://localhost:3000/multiselect-dropdown.html
+
+If using Python's default server, use port 8000 instead.
+
+## Accessibility notes
+
+The autocomplete examples use an ARIA combobox/listbox pattern.
+
+The multi-select examples intentionally use a filterable checkbox-group pattern rather than a fully custom ARIA multi-select listbox, because that is usually the safer and more reliable accessibility approach for 508/WCAG work.
