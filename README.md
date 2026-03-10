@@ -7,6 +7,21 @@ This package includes four examples:
 - `multiselect.html`
 - `multiselect-dropdown.html`
 
+## Run locally
+
+Open any HTML file directly after unzipping, or run a local server.
+
+Using Node:
+npx serve
+
+Then open:
+
+- http://localhost:3000/autocomplete.html
+- http://localhost:3000/autocomplete-dropdown.html
+- http://localhost:3000/multiselect.html
+- http://localhost:3000/multiselect-dropdown.html
+
+
 ## What changed in this version
 
 This update includes the requested UI changes:
@@ -29,20 +44,6 @@ This update includes the requested UI changes:
 - `multiselect-dropdown.js`
 - `styles.css`
 - `README.md`
-
-## Run locally
-
-Open any HTML file directly after unzipping, or run a local server.
-
-Using Node:
-npx serve
-
-Then open:
-
-- http://localhost:3000/autocomplete.html
-- http://localhost:3000/autocomplete-dropdown.html
-- http://localhost:3000/multiselect.html
-- http://localhost:3000/multiselect-dropdown.html
 
 ## Accessibility notes
 
