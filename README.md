@@ -11,14 +11,11 @@ This package includes four examples:
 
 This update includes the requested UI changes:
 
-- the dropdown panels now sit flush against the trigger
-- the multi-select dropdown shows selected items as inline tags inside the trigger
-- the multi-select still supports Tab, Space, and Enter for checkbox access
+- multi-select dropdown actually drops down lol
 
 ## TODO
 
-- multiselect is broken 😔
-- make multiselect more accessible, especially for screen readers
+- test with screen reader
 
 ## Included files
 
