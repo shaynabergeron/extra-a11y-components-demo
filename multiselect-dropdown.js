@@ -1,6 +1,7 @@
 function setupCheckboxEnterSupport(container) {
   container.addEventListener("keydown", (event) => {
     const target = event.target;
+
     if (
       target &&
       target.matches('input[type="checkbox"]') &&
@@ -59,12 +60,14 @@ function announce(message) {
   }, 10);
 }
 
-const selectedCount = selectedArray.length;
-const accessibleLabel = selectedCount
-  ? `Select technologies, ${selectedCount} selected`
-  : "Select technologies, none selected";
+function updateTriggerAriaLabel(selectedArray) {
+  const selectedCount = selectedArray.length;
+  const accessibleLabel = selectedCount
+    ? `Select technologies, ${selectedCount} selected`
+    : "Select technologies, none selected";
 
-trigger.setAttribute("aria-label", accessibleLabel);
+  trigger.setAttribute("aria-label", accessibleLabel);
+}
 
 function openPanel() {
   panel.hidden = false;
@@ -75,15 +78,21 @@ function openPanel() {
 function closePanel(focusTrigger = true) {
   panel.hidden = true;
   trigger.setAttribute("aria-expanded", "false");
-  if (focusTrigger) trigger.focus();
+  if (focusTrigger) {
+    trigger.focus();
+  }
 }
 
 function updateSummary() {
   const selectedArray = Array.from(selected);
+
   summary.textContent = createSelectionText(
     selectedArray,
-    "No technologies selected.",
+    "No technologies selected."
   );
+
+  updateTriggerAriaLabel(selectedArray);
+
   tags.innerHTML = "";
   tagContainer.innerHTML = "";
 
@@ -151,6 +160,7 @@ function renderOptions() {
         selected.delete(item);
         announce(`${item} removed.`);
       }
+
       updateSummary();
     });
 
@@ -162,15 +172,30 @@ function renderOptions() {
 
 filterInput.addEventListener("input", () => {
   const query = filterInput.value.trim().toLowerCase();
+
   filteredOptions = query
     ? techOptions.filter((item) => item.toLowerCase().includes(query))
     : [...techOptions];
+
   renderOptions();
 });
 
+filterInput.addEventListener("keydown", (event) => {
+  if (event.key === "ArrowDown") {
+    event.preventDefault();
+    const firstCheckbox = optionsContainer.querySelector('input[type="checkbox"]');
+    if (firstCheckbox) {
+      firstCheckbox.focus();
+    }
+  }
+});
+
 trigger.addEventListener("click", () => {
-  if (panel.hidden) openPanel();
-  else closePanel();
+  if (panel.hidden) {
+    openPanel();
+  } else {
+    closePanel();
+  }
 });
 
 clearButton.addEventListener("click", () => {
@@ -193,7 +218,9 @@ panel.addEventListener("keydown", (event) => {
 });
 
 document.addEventListener("click", (event) => {
-  if (!wrapper.contains(event.target) && !panel.hidden) closePanel(false);
+  if (!wrapper.contains(event.target) && !panel.hidden) {
+    closePanel(false);
+  }
 });
 
 setupCheckboxEnterSupport(optionsContainer);
