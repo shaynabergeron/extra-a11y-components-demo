@@ -1,4 +1,4 @@
-# Pelican-Inspired Accessible Bootstrap Form Component Demos
+# Accessible Bootstrap Form Component Demos
 
 This package includes four examples:
 
