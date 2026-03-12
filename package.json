@@ -8,7 +8,7 @@
         "axe": "axe http://127.0.0.1:3000/autocomplete.html http://127.0.0.1:3000/autocomplete-dropdown.html http://127.0.0.1:3000/multiselect.html http://127.0.0.1:3000/multiselect-dropdown.html"
     },
     "devDependencies": {
-        "@axe-core/cli": "^4.10.2",
+        "@axe-core/cli": "4.10.2",
         "live-server": "^1.2.2",
         "pa11y-ci": "^4.0.1",
         "wait-on": "^8.0.1"
