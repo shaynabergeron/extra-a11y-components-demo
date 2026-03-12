@@ -1,0 +1,14 @@
+{
+    "name": "extra-a11y-components-demo",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "serve": "npx live-server --port=3000 --no-browser --watch=.",
+        "pa11y": "pa11y-ci"
+    },
+    "devDependencies": {
+        "live-server": "^1.2.2",
+        "pa11y-ci": "^4.0.1",
+        "wait-on": "^8.0.1"
+    }
+}
