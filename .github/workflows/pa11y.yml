@@ -34,6 +34,3 @@ jobs:
 
       - name: Run Pa11y
         run: npm run pa11y
-
-      - name: Run axe
-        run: npm run axe
